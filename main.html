@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="app.css">
+    <title>PostPortal</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/TextGeometry.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/FontUtils.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/pnltri.min.js"></script>
+    <script src="https://zoomer-slang.ru/myFontBlack.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js"></script>
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<div class="screen">
+    <!--экран 1-->
+    <div class="screen-section container">
+        <div class="plaska">PastPortal</div>
+        <script>
+            THREE.ShapeUtils.triangulateShape = (function () {
+                var pnlTriangulator = new PNLTRI.Triangulator();
+                return function triangulateShape(contour, holes) {
+                    return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+                };
+            })();
+        </script>
+        <div id="three-container"></div>
+    </div>
+    <!--экран 2-->
+    <div class="screen-section container-main">
+        <div id="plaska-main">PastPortal</div>
+        <div class="main-description" id="animated-text">PastPortal — это не просто аксессуар в виде песочных часов. Это портал в прошлое, устройство, которое дает вам власть контролировать время. С ними вы можете исправить ошибки, которые изменили вашу жизнь в худшем направлении.
+        </div>
+        <div class="main-text"><a href="#"> Это шанс изменить свою жизнь, шанс сделать все иначе. Но помните, с великой силой идет великая ответственность.</a>
+        </div>
+    </div>
+    <!--экран 3-->
+    <div class="screen-section container-main">
+        <div id="plaska-main">PastPortal</div>
+        <div class="slider">
+            <div class="slider__item">
+                <div class="slider__img">
+                    <img src="./images/hi-tech_minimalistic_hourglass.png" alt="hi-tech_minimalistic_hourglass">
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__img">
+                    <img src="./images/hi-tech_minimalistic_hourglass2.png" alt="hi-tech_minimalistic_hourglass2">
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__img">
+                    <img src="./images/hi-tech_minimalistic_hourglass3.png" alt="hi-tech_minimalistic_hourglass3">
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__img">
+                    <img src="./images/hi-tech_minimalistic_hourglass3.png" alt="hi-tech_minimalistic_hourglass3">
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="slider__img">
+                    <img src="./images/hi-tech_minimalistic_hourglass3.png" alt="hi-tech_minimalistic_hourglass3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--экран4-->
+    <div class="screen-section white">
+        <div class="container-main container-main-white">
+            <div class="plaska-white">
+                PastPortal
+            </div>
+            <div class="title-white">Для кого?</div>
+            <div class="blocks">
+                <div class="blocks__item">
+                    <div class="blocks__item-title">Ответственных людей</div>
+                    <div class="blocks__item-description">Людей, которые осознают важность каждого принятого решения и хотят внести вклад в будущее не уничтожая его</div>
+                    <div class="blocks__item-description">Тех, кто готов принять на себя ответственность за<span class="no-wrap"> использование</span> такой мощной технологии,
+                        как<span class="no-wrap"> путешествие</span> во<span class="no-wrap"> времени</span></div>
+                </div>
+                <div class="blocks__item blocks__item-right">
+                    <div class="blocks__item-title">Людей, которые хотят изменить свое решение</div>
+                    <div class="blocks__item-description">Людей, которые осознают, что они совершили ошибку, в<span class="no-wrap"> следствие</span>
+                        следствие чего произошли неблагоприятные события, и которые хотели бы изменить ситуацию
+                        в лучшую сторону.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--экран 5-->
+    <div class="screen-section container-main" id="screen5">
+        <div id="plaska-main">PastPortal</div>
+        <div class="title">Основные функции и преимущества</div>
+        <div class="functions">
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Отматывание времени</div>
+                <div class="functions__block-description">Позволяют вам вернуться на<span class="no-wrap"> 10 часов</span> назад в прошлое, давая возможность пережить события вновь.</div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Память о<span class="no-wrap"> будущем</span> </div>
+                <div class="functions__block-description">Сохраняют ваши воспоминания о будущем, даже после того как вы вернулись в<span class="no-wrap"> прошлое.</span></div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Дизайн</div>
+                <div class="functions__block-description">Часы выполнены в стильном и<span class="no-wrap"> современном дизайне,</span> который подойдет к<span class="no-wrap"> любому</span> образу.</div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Ощущение контроля</div>
+                <div class="functions__block-description">Вы больше не будете чувствовать себя беспомощными перед лицом времени. Они дадут вам возможность взять под контроль каждый момент своей жизни</div>
+            </div>
+        </div>
+    </div>
+    <!--экран 6-->
+    <div class="screen-section white">
+        <div class="container-main container-main-white">
+            <div class="plaska-white">PastPortal</div>
+            <div class="white__content">
+                <div class="title-white">ПРЕДОСТЕРЕЖЕНИЕ</div>
+                <div class="main-description main-description-white">PastPortal — это не просто аксессуар в виде песочных часов.
+                    Это портал в прошлое, устройство, которое дает вам власть контролировать время.
+                    С<span class="no-wrap"> ними</span> вы можете исправить ошибки, которые изменили вашу жизнь в худшем направлении.
+                </div>
+                <div class="main-text main-text-white">Помните, что чем сильнее технологии влияют на нашу жизнь,
+                    тем они опаснее, тем более если это касается времени. Ведь никогда не знаешь,
+                    какой эффект окажут ваши действия и как они повлияют на вашу жизнь и жизнь людей,
+                    что находятся с вами в тот момент
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--экран 7 Отзывы Клиентов-->
+    <div class="screen-section container-main" id="screen7">
+        <div id="plaska-main">PastPortal</div>
+        <div class="title">Отзывы клиентов</div>
+        <div class="functions">
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Елена, 35 лет</div>
+                <div class="functions__block-description">«Они действительно помогают мне вести более осознанную жизнь, зная,
+                    что<span class="no-wrap"> я могу</span> вернуться и<span class="no-wrap"> изменить вещи,</span> если что-то пойдет не так.»
+                </div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Алексей, 28 лет</div>
+                <div class="functions__block-description">«Сначала я был скептически настроен,
+                    но<span class="no-wrap"> Часы-времени</span> действительно работают. Я<span class="no-wrap"> смог</span> вернуться и исправить большую ошибку,
+                    которую совершил в прошлом. Это<span class="no-wrap"> невероятно!</span>»
+                </div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Ирина, 45 лет</div>
+                <div class="functions__block-description">«Я всегда искала что-то подобное. Часы-времени не<span class="no-wrap"> только</span> отлично работают,
+                    но<span class="no-wrap"> и выглядят</span> стильно.
+                    Я<span class="no-wrap"> стараюсь</span> не<span class="no-wrap"> пользоваться</span> ими часто, ведь могу изменить не только свою, но<span class="no-wrap"> и чужую жизнь,</span>
+                    а это большая ответственность.»
+                </div>
+            </div>
+            <div class="functions__block fade-in-div">
+                <div class="functions__block-title">Иван, 20 лет</div>
+                <div class="functions__block-description">Я приобрел PastPortal и<span class="no-wrap"> теперь</span> более обдумано отношусь к<span class="no-wrap"> своим</span> действиям,
+                ведь хоть и<span class="no-wrap"> можно</span> отмотать время вспять, но не все можно исправить, даже с<span class="no-wrap"> искажением</span> времени
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    экран 8-->
+    <div class="screen-section container-main">
+        <div id="plaska-main">PastPortal</div>
+        <div class="title">FAQ</div>
+        <div class="parent-container">
+            <ul class="faq">
+                <li>
+                    <h3 class="question">Как работают Часы-времени?
+                        <div class="plus-minus-toggle collapsed"></div>
+                    </h3>
+                    <div class="answer">Часы-времени используют сложные технологии для перемещения пользователя в<span class="no-wrap"> прошлое.</span>
+                        Просто переверните часы и вы попадете на час в прошлое. Максимум переворотов может быть 10,
+                        то есть больше чем на 10 часов назад прыгнуть во времени вы<span class="no-wrap"> не сможете.</span>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="question">Можно ли использовать Часы-времени для перемещения <br> в будущее?
+                        <div class="plus-minus-toggle collapsed"></div>
+                    </h3>
+                    <div class="answer">В настоящее время Часы-времени предназначены только для путешествий в прошлое.
+                        Мы<span class="no-wrap"> надеемся</span> добавить функцию путешествия в будущее в будущих версиях.
+                    </div>
+                </li>
+                <li>
+                    <h3 class="question">Безопасно ли использовать Часы-времени?
+                        <div class="plus-minus-toggle collapsed"></div>
+                    </h3>
+                    <div class="answer">Да, использование Часов-времени абсолютно безопасно.
+                        Они прошли все необходимые тесты и соответствуют всем стандартам безопасности.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--Cursor-->
+<div class="block block--black">
+    <h5 class="block__title">
+        Hello World!
+    </h5>
+    <a href="#!" class="block__link">
+        I'm link :)
+    </a>
+</div>
+<div class="block block--white">
+    <h5 class="block__title">
+        Hello World!
+    </h5>
+    <a href="#!" class="block__link">
+        I'm link :)
+    </a>
+</div>
+<div class="custom-cursor"></div>
+</body>
+</html>
+

@@ -141,9 +141,9 @@ function init() {
         antialias:(window.devicePixelRatio === 1),
         fov:60
     });
-    if (window.matchMedia("(max-width: 880px)").matches) {
+    if (window.matchMedia("(max-width: 896px)").matches) {
         // Код для мобильных устройств
-        root.camera.position.set(0, 0, 400); // Более близкое расположение камеры
+        root.camera.position.set(0, 0, 600); // Более близкое расположение камеры
         // Другие настройки специфичные для мобильных устройств
     } else if (window.matchMedia("(max-width: 1024px)").matches) {
         // Код для настольных или планшетных устройств

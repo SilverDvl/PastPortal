@@ -10,6 +10,13 @@ a {
   color: #E7E7E7;
   text-decoration: none;
 }
+.white-a {
+  color: #101010;
+  @media screen and (max-width: 1024px) {
+    font-size: 15.64px;
+    padding-top: 8.3%;
+  }
+}
 .screen {
   width: 100%;
   height: 100%;
@@ -56,6 +63,66 @@ a {
   padding-left: 45px;
   z-index: 99;
   padding-top: 20px;
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    color: #E7E7E7;
+    font-size: 19.64px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    padding-top: 10%;
+    @media screen and (max-width: 1024px) {
+      font-size: 15.64px;
+      padding-top: 18.6%;
+    }
+    &-left {
+      font-size: 19.64px;
+      font-family: 'Play', sans-serif;
+      font-weight: 700;
+      color: #E7E7E7;
+      padding-left: 45px;
+      z-index: 99;
+    }
+  }
+  &__white{
+    display: flex;
+    justify-content: space-between;
+    color: #101010;
+    font-size: 19.64px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    padding-top: 4%;
+    @media screen and (max-width: 1024px) {
+      font-size: 15.64px;
+      padding-top: 7.3%;
+    }
+    &-left {
+      font-size: 19.64px;
+      font-family: 'Play', sans-serif;
+      font-weight: 700;
+      color: #101010;
+      z-index: 99;
+    }
+  }
+  &__caution {
+    display: flex;
+    justify-content: space-between;
+    color: #101010;
+    font-size: 19.64px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    @media screen and (max-width: 1024px) {
+      font-size: 15.64px;
+      padding-top: 5.7%;
+    }
+    &-left {
+      font-size: 19.64px;
+      font-family: 'Play', sans-serif;
+      font-weight: 700;
+      color: #101010;
+      z-index: 99;
+    }
+  }
   @media screen and (max-width: 1024px) {
     font-size: 15.64px;
   }
@@ -168,8 +235,9 @@ a {
 .slider {
   justify-content: center;
   margin-top: 5%;
+  margin-bottom: 2%;
   @media screen and (max-width: 1024px) {
-    padding: 9% 0;
+    padding: 2.5% 0;
   }
   @media screen and (max-width: 896px) {
     padding: 0;
@@ -275,6 +343,16 @@ a {
 }
 .functions {
   display: flex;
+  padding-bottom: 14%;
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 8.2%;
+  }
+  &-pb {
+    padding-bottom: 12%;
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 7.7%;
+    }
+  }
   &__block {
     display: flex;
     flex-direction: column;
@@ -327,9 +405,12 @@ a {
 // FAQ
 
 .parent-container {
-  padding:0 20px 0 20px;
+  padding:0 20px 8% 20px;
   max-width:800px;
   width:100%;
+  @media screen and (max-width: 1024px) {
+    padding: 0 20px 4.5% 20px;
+  }
 }
 .faq {
   list-style:none;
